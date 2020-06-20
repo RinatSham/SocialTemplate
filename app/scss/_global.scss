@@ -16,3 +16,21 @@ li{
   padding: 0;
   list-style: none;
 }
+body{
+  color: $black;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper-head{
+  max-width: 1920px;
+  background-image: url(../images/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 1130px;
+  margin: 0 auto;
+}
+.container{
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
