@@ -53,6 +53,12 @@
 
 // start ourServices
 
+.ourServices{
+  padding-bottom: 40px;
+  .section-title{
+    max-width: 200px;
+  }
+}
 .container-section{
   max-width: 1355px;
   margin: 0 auto;
@@ -61,22 +67,19 @@
   display: flex;
   justify-content: space-between;
 }
-.ourServices__box{
-  max-width: 200px;
-}
-.ourServices__title{
+.section-title__title{
   font-size: 30px;
   font-weight: 600;
   line-height: 52px;
 }
-.ourServices__text{
+.section-title__text{
   font-weight: 300;
   color: $grey;
   line-height: 35px;
   margin-top: 20px;
 }
-.ourServices__btn{
-  margin-top: 40px;
+.section-title__btn{
+  margin: 40px 0;
   background-image: linear-gradient( 90deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
   width: 180px;
   height: 60px;
@@ -95,13 +98,13 @@
     position: absolute;
     right: 28px;
   }
-  &:hover .ourServices__btn--hover{
+  &:hover .section-title__btn--hover{
     opacity: 0.78;
     z-index: -1;
     transition: all .5s;
   }
 }
-.ourServices__btn--hover{
+.section-title__btn--hover{
   background-image: url(../images/2/hover.png);
   width: 297px;
   height: 155px;
@@ -133,10 +136,180 @@
   line-height: 26px;
 }
 
-
-
-
-
-
-
 // end ourServices
+
+// start video
+
+.video{
+  max-width: 1920px;
+  color: #fff;
+  position: relative;
+  margin: 0 auto;
+  &:hover .video__hover{
+    opacity: 0.949;
+    transition: all .8s;
+  }
+}
+.video__slider-img{
+  object-fit: cover;
+  object-position: center;
+  min-height: 723px;
+}
+.video__hover{
+  background-image: linear-gradient( 270deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all .8s;
+}
+.video__hover-title{
+  font-size: 30px;
+  line-height: 52px;
+  max-width: 415px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.video__hover-text{
+  font-size: 16px;
+  line-height: 35px;
+  font-weight: 300;
+  max-width: 730px;
+}
+
+// end video
+
+// start ability
+
+.ability{
+  padding-top: 110px;
+  background-image: url(../images/3/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1920px;
+  margin: 0 auto;
+  .section-title{
+    text-align: center;
+    margin-bottom: 80px;
+  }
+}
+.ability-container{
+  max-width: 1610px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.ability-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 260px;
+  &:last-child{
+    margin-bottom: 200px;
+  }
+  &.ability-box--reverse{
+    flex-direction: row-reverse;
+    .ability-box__info{
+      text-align: right;
+    }
+    .ability-box__title{
+      &::before{
+        right: -12px;
+        top: 0;
+        left: unset;
+      }
+    }
+  }
+}
+.ability-box__info{
+  max-width: 520px;
+  width: 100%;
+  font-weight: 200;
+}
+.ability-box__title{
+  font-size: 39px;
+  padding-top: 45px;
+  margin-bottom: 40px;
+  position: relative;
+  &::before{
+    content: '';
+    background-image: url(../images/3/dot.png);
+    width: 57px;
+    height: 37px;
+    position: absolute;
+    left: -12px;
+    top: 0;
+  }
+}
+.ability-box__text{
+  line-height: 35px;
+  color: $grey;
+}
+.ability-box__img{
+  max-width: 916px;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 4px 0px 63px -17px rgba(0,0,0,0.72);
+  }
+}
+
+// end ability
+
+// start benefits
+
+.benefits__box{
+  margin: 0 auto;
+  display: flex;
+  border-radius: 48px;
+  background-image: linear-gradient( 60deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
+  max-width: 1029px;
+  height: 258px;
+  padding: 33px 54px;
+  transition: all .5s;
+  &:hover{
+    box-shadow: 0px 0px 61px -16px rgba(88,153,186,1);
+  }
+}
+.benefits__col{
+  max-width: 312px;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  &:nth-child(2){
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+}
+.benefits__img{
+  margin: 0 auto;
+  width: 44px;
+  height: 53px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 23px;
+}
+.benefits__title{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.benefits__text{
+  font-size: 14px;
+  color: #474747;
+  max-width: 137px;
+  margin: 0 auto;
+}
+
+// end benefits
