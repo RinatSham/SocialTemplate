@@ -80,7 +80,7 @@
 }
 .section-title__btn{
   margin: 40px 0;
-  background-image: linear-gradient( 90deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
+  background: linear-gradient( 90deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
   width: 180px;
   height: 60px;
   border-radius: 30px;
@@ -156,7 +156,7 @@
   min-height: 723px;
 }
 .video__hover{
-  background-image: linear-gradient( 270deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
+  background: linear-gradient( 270deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -267,17 +267,20 @@
 
 // start benefits
 
+.benefits{
+  padding-bottom: 140px;
+}
 .benefits__box{
   margin: 0 auto;
   display: flex;
   border-radius: 48px;
-  background-image: linear-gradient( 60deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
+  background: linear-gradient( 60deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
   max-width: 1029px;
   height: 258px;
   padding: 33px 54px;
   transition: all .5s;
   &:hover{
-    box-shadow: 0px 0px 61px -16px rgba(88,153,186,1);
+    box-shadow: 0px 0px 61px 18px rgba(88,153,186,1);
   }
 }
 .benefits__col{
@@ -313,3 +316,125 @@
 }
 
 // end benefits
+
+// start price
+
+.price{
+  .section-title{
+    text-align: center;
+    margin: 0 auto 140px;
+    max-width: 585px;
+  }
+  .section-title__title{
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .section-title__btn{
+    margin: 40px auto 0;
+    &::after{
+      right: 50px;
+    }
+  }
+}
+.price__wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  align-items: baseline;
+}
+.price__box{
+  flex-basis: 410px;
+  padding: 0 53px;
+  box-shadow: 0px 55px 139px 0px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+  transition: all .2s;
+  overflow: hidden;
+  background-color: #fdfdfd;
+  &:hover{
+    transform: scale(1.17);
+    padding: 0;
+  }
+  &:hover .price__box-inner{
+    padding: 50px;
+    background: linear-gradient( -110deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
+    color: #fff;
+  }
+  &:hover .price__box-head{
+    padding: 40px 50px;
+    border-bottom: 0;
+  }
+  &:hover .price__box-list{
+    margin-bottom: 30px;
+  }
+  &:hover .price__box-list li::before{
+    background-image: url(../images/price/checked-hover.png);
+  }
+  &:hover .price__box-btn{
+    color: #0091ff;
+    background: #fff;
+  }
+  &:hover .price__box-name{
+    color: #00abff;
+  }
+  &:hover .price__box-count{
+    color: #33cc66;
+  }
+}
+.price__box-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0;
+  border-bottom: 2px solid #ddd;
+}
+.price__box-name{
+  font-size: 35px;
+  color: #adacac;
+  font-weight: 600;
+}
+.price__box-count{
+  font-weight: 500;
+  font-size: 22px;
+}
+.price__box-inner{
+  padding-top: 50px;
+  padding-bottom: 60px;
+  color: #5d5d5d;
+  font-size: 14px;
+  line-height: 30px;
+}
+.price__box-desc{
+  margin-bottom: 30px;
+}
+.price__box-list{
+  margin-bottom: 40px;
+  li{
+    padding-left: 30px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url(../images/price/checked.png);
+      width: 14px;
+      height: 11px;
+      top: 9px;
+      left: 0;
+    }
+  }
+}
+.price__box-btn{
+  background: linear-gradient( 60deg, rgb(0,198,255) 0%, rgb(0,156,255) 55%, rgb(0,114,255) 100%);
+  box-shadow: 0px 9px 43px 0px rgba(0, 0, 0, 0.22);
+  width: 138px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+// end price
+
+
+
