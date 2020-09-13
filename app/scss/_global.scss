@@ -20,7 +20,23 @@ body{
   color: $black;
   font-family: 'Poppins', sans-serif;
 }
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
 .wrapper-head{
+  max-width: 1920px;
   background-image: url(../images/bg-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,5 +46,13 @@ body{
 .container{
   max-width: 1280px;
   padding: 0 15px;
+  margin: 0 auto;
+}
+.wrapper-blog{
+  max-width: 1920px;
+  background-image: url(../images/bg-blog.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 412px;
   margin: 0 auto;
 }
